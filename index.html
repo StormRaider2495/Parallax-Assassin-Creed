@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assassin's Creed</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+      <div class="assassin-loader">
+          <div class="loader"></div>
+          <div class="loading">
+            <span>Loading</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </div>
+          <div id="progstat"></div>
+          <div id="progress"></div>
+      </div>
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Assassin's Creed</a>
+          </div>
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="javascript:void(0)"><span class="glyphicon glyphicon-home"></span> Home</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><img src="https://drive.google.com/uc?id=0B4OCkOHXRU2-OGFvbTl2YVJfZjA" alt="" height="25px" width="25px"> Assassins </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"> About</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Latest</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-logo"></div>
+      </nav>
+
+      <div id='hero'>
+        <div class='logo' data-depth='0.50' data-type='parallax'></div>
+        <div class='layer-bg layer' data-depth='0.10' data-type='parallax' load-type="bgImg"></div>
+        <div class='layer-1 layer' data-depth='0.20' data-type='parallax' load-type="bgImg"></div>
+        <div class='layer-2 layer' data-depth='0.50' data-type='parallax' load-type="bgImg"></div>
+        <div class='layer-3 layer' data-depth='0.80' data-type='parallax' load-type="bgImg"></div>
+        <div class='layer-overlay layer' data-depth='0.85' data-type='parallax' load-type="bgImg"></div>
+        <div class='layer-4 layer' data-depth='0.95' data-type='parallax' load-type="bgImg"></div>
+      </div>
+
+      <div id='hero-mobile' class='mobile'></div>
+
+      <div class='content'>
+        <div class='container'>
+          <section class='first-section'>
+            <div class='row'>
+              <div class='col-sm-6'>
+                <blockquote>
+                  <p>
+                    Where other men blindly follow the truth, Remember, nothing is true.
+                    Where other men are limited by morality or law, Remember, everything is permitted.
+                    We work in the dark to serve the light.
+                    We are assassins.
+                    <p>“Nothing is real.; Everything is permitted.” </p>
+                  </p>
+                  <footer>Assassin's creed moto.</footer>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id='assassins'  load-type="bgImg">
+        <div class='overlay-2' data-depth='0.35' data-type='parallax'  load-type="bgImg"></div>
+        <div class='assassin-0' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Shao Jun (1505 – unknown) </span> </div>
+        <div class='assassin-1' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Altaïr Ibn-La'Ahad (1165–1257) </span> </div>
+        <div class='assassin-2' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Ezio Auditore da Firenze (1459–1524)</span> </div>
+        <div class='assassin-3' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Ratonhnhaké:ton, also known as Connor (1756 – unknown)</span> </div>
+        <div class='assassin-4' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Arno Victor Dorian (1768 – unknown)</span></div>
+        <div class='assassin-5' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Edward James Kenway (1693–1735) </span></div>
+        <div class='assassin-6' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Aveline de Grandpré (1747 – unknown) </span></div>
+        <div class='assassin-7' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Jacob Frye (1847 - unknown) </span></div>
+        <div class='assassin-8' data-depth='0.5' data-type='parallaxAssassino' load-type="bgImg">  <span> Evie Frye (1847 – unknown) </span></div>
+        <div class='year-bar year-bar-left' data-depth='0.5' data-type='parallaxAssassino'>2007</div>
+        <div class='year-bar year-bar-right' data-depth='0.5' data-type='parallaxAssassino'>2015</div>
+        <div class='assassin-9' data-depth='0.5' data-type='parallaxAssassinBg' load-type="bgImg"></div>
+      </div>
+
+      <div id="assassin-mobile" class='mobile'></div>
+
+      <div class='content'>
+        <div class='container'>
+          <section class='first-section'>
+            <div class='row'>
+              <div class='col-sm-6'>
+                <blockquote>
+                  <p>
+                  To say that nothing is true, is to realize that the foundations of society are fragile, and that we must be the shepherds of our own civilization.
+                  To say that everything is permitted, is to understand that we are the architects of our actions,
+                  and that we must live with their consequences, whether glorious or tragic.
+                  </p>
+                  <footer>Ezio Auditore da Firenze</footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class='row' style="font-size: 18px;">
+              <div class='col-sm-6'>
+                <p>Every Assassin’s Creed game tells two intertwining stories. One is of an Assassin and their adventures in the past, and the other is of a person in the present who’s experiencing that Assassin’s “genetic memories” through a device known as the Animus, or more recently as Helix. While the historical Assassins inhabit mostly self-contained stories that link together across centuries, the present-day storyline has continued in a more or less linear fashion since the series began.</p>
+              </div>
+              <div class='col-sm-6'>
+                <p>In case you’ve missed any of the previous games, we’ve put together a condensed version of each game’s modern-day plot to catch you up on what’s happened since Desmond Miles was first imprisoned by Abstergo. There are huge spoilers ahead (although we’ve left the plotlines of the comics and other media for you to discover), so consider yourself warned.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class='details detail-1' data-type='ac-details' data-speed='0.5'  load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed (2007)</h1></div>
+        <div class='game-logo game-logo-1'  load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>The first Assassin's Creed introduced elements that would remain cornerstones of the rest of the series. The game attempts to create historical versions of Masyaf (the Brotherhood's location), Jerusalem, Acre and Damascus, and incorporates a number of documented historical figures into the story. The virtualized Animus system, free running, climbing, stealth, and parkour elements were all present in this title, as well as the initial formulation of the combat system. The player would have to complete a number of side quests before they would be able to obtain an assassin quest from a local Brotherhood guidemaster in each city, though future games would abandon this prerequisite.</p>
+        </article>
+      </section>
+
+      <section class='details detail-2' data-type='ac-details' data-speed='0.5'  load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed II (2009)</h1></div>
+        <div class='game-logo game-logo-2'  load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>Similar to the first game, Assassin's Creed takes place in historical recreations of Venice, Florence, Forlì, San Gimignano, and the Tuscan countryside, and incorporates events during that period as part of the story. Missions are divided into main story missions, themselves divided into memory sequences reflected points along Ezio's life, and side missions which can be accomplished at any time; this approach to mission structure remains consistent in the other games in the series. The Monteriggioni villa provides several functions which can be expanded on by paying money for upgrades of surrounding buildings, or by purchasing artwork, weapons, and costumes for the villa; in turn, the villa will generate wealth for the player at a rate influenced by the upgrades and acquisition of these items. Additional quests involve locating secret Assassin seals, and finding hidden marks left by "Subject 16", a former Animus user, that hint at the nature of Minerva's society.</p>
+        </article>
+      </section>
+
+      <section class='details detail-3' data-type='ac-details' data-speed='0.5'  load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed Brotherhood (2010)</h1></div>
+        <div class='game-logo game-logo-3'  load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>Brotherhood shares many of the same features as the previous game though it takes place primarily in Rome. Similar to the villa, the player is able to spend money to buy and upgrade shops and other facilities throughout the city as to increase revenue they can collect from it; however, the player will be required to destroy Borgia towers that control various sections of the city before they can do so. The Brotherhood of Assassins is introduced, by which, after saving citizens from certain events, the player can invite these citizens as Assassins; they can then be dispatched to remote locations across Europe to gain experience and money, or can be called in to help the player directly in a mission. For the first time in the series, the game features online multiplayer. Players play as Abstergo employees, who, through the use of the Animus, take on the genetic memories of Renaissance Templars in various game modes.</p>
+          </article>
+      </section>
+
+      <section class='details detail-4' data-type='ac-details' data-speed='0.5'  load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed Revelations (2011)</h1></div>
+        <div class='game-logo game-logo-4'  load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>The game continues Desmond's story in the present day, following the events of Brotherhood, where he is trapped in the Animus 2.0, in a comatose state, in which he has found a safe mode known as "the Black Room". Here, Desmond must find a "synch nexus", a key memory that links him with Altaïr and Ezio, to reintegrate his splintered subconscious and awaken from his coma. While in game, Ezio meets a variety of historical characters, including: Manuel Palaiologos, an heir to the now-lost Byzantine Empire; Byzantine Templars lurking in the shadows of Constantinople; Prince Suleiman, a man who will one day become one of the Ottoman Empire's greatest Sultans; and his uncle, Prince Ahmet.</p>
+        </article>
+      </section>
+
+      <section class='details detail-5' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed III (2012)</h1></div>
+        <div class='game-logo game-logo-5' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>Assassin's Creed III is structured similarly to the previous games, with missions taking place on an open-world map based on Colonial Boston and New York, and offers a large wilderness area, the Frontier and in the Davenport Homestead, where the player can hunt animals for materials, which then subsequently can be used to construct goods to be traded and sold throughout the colonies. Naval battles were introduced, wherein the player must steer a warship named Aquila in dangerous waters and perform ship-to-ship combat with cannons and mounted guns. In Assassin's Creed III there are a large assortment of mini missions to play and many different outfits to purchase as the player progresses through the game. The modern-day aspects of the story were also significantly expanded, and featured missions taking place in, among other locations, Manhattan, Rome and Brazil.</p>
+        </article>
+      </section>
+
+      <section class='details detail-6' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed III Liberation (2012)</h1></div>
+        <div class='game-logo game-logo-6' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>Assassin's Creed III: Liberation is a 2012 action-adventure video game developed and published by Ubisoft, initially as an exclusive title for PlayStation Vita. Sony announced the game at its press conference during the Electronic Entertainment Expo 2012, few days after first leaks about the game presented in Game Informer.[10] It was released on October 30, 2012 alongside Assassin's Creed III, with which it can be linked.</p>
+          <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The game is set between 1765 and 1777, and primarily features the series' first female protagonist, Aveline de Grandpré, an African-French Assassin around the end of the French and Indian War, in 18th century New Orleans.</p>
+        </article>
+      </section>
+
+      <section class='details detail-7' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed IV Black Flag (2013)</h1></div>
+        <div class='game-logo game-logo-7' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+            <p>As Kenway, the player must unravel a conspiracy between high-ranking Templars to manipulate the British, Spanish and French empires into locating the Sage - later identified as Bartholomew Roberts - who is the only man who can lead them to the Observatory.</p>
+            <p>In the present day, the player is contacted by John, Abstergo Entertainment's information technology manager. John convinces the player that his employer knows more than they are telling, and encourages them to investigate in more detail. He arranges for the player to access the Animus' core, at which point Juno materialises into an incorporeal form. She reveals that although it was necessary to open her temple to avert disaster, the world was not ready for her, and she is unable to affect it or possess the player character as her agents intended. John is unmasked as the reincarnated form of the Sage and attempts to murder the player to cover up the failed attempt at resurrecting Juno, but is killed by Abstergo's security before he can do so. As Roberts, the Sage admits to Kenway that he owes no allegiance to the Assassins or the Templars and instead uses whoever he thinks represents his best chance of achieving his ends.</p>
+        </article>
+      </section>
+
+      <section class='details detail-8' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed Rogue (2014)</h1></div>
+        <div class='game-logo game-logo-8' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>The modern day plot begins one year after the events of Black Flag, with a new unnamed player character who works for Abstergo Entertainment. While investigating the memories of Shay Patrick Cormac, an Irish Assassin working in the North Atlantic during the French and Indian War, they inadvertently trip a hidden memory file that corrupts the Abstergo servers. With the building being put into lockdown, the player is recruited by Melanie Lemay to continue exploring Cormac's memories in an effort to clear the system.</p>
+          <p>Cormac is a new recruit to the Brotherhood of Assassins, working under Achilles Davenport. Achilles sees potential in him, but Cormac develops an insubordinate streak that frustrates his mentors. Believing that taking a more active role in the Brotherhood's affairs will shape him into a better assassin, Achilles orders Cormac with his newly acquired ship, the Morrígan, to track down a Templar cell that has been deciphering a Precursor artifact revealing the locations of several Pieces of Eden.</p>
+        </article>
+      </section>
+
+      <section class='details detail-9' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed Unity (2014)</h1></div>
+        <div class='game-logo game-logo-9' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is set in Paris during the French Revolution; the single-player story follows Arno Dorian in his efforts to expose the true powers behind the Revolution. The game retains the series' third-person open world exploration as well as introducing a revamped combat, parkour and stealth system. The game also introduces cooperative multiplayer to the Assassin's Creed series, letting up to four players engage in narrative-driven missions and explore the open-world map.</p>
+        </article>
+      </section>
+
+      <section class='details detail-10' data-type='ac-details' data-speed='0.5' load-type="bgImg">
+        <div class='game-name'><h1>Assassin<span>'</span>s Creed Syndicate (2015)</h1></div>
+        <div class='game-logo game-logo-10' load-type="bgImg"></div>
+        <article class='game-story'>
+          <h2> The Story So Far... </h2>
+          <p>In 1868, at the tail end of the Industrial Revolution, with the Assassin Brotherhood all but eradicated in Victorian London, twins Jacob and Evie Frye leave Croydon for London and arrive to find a city controlled by the Templars, with both the Church and the Monarchy losing their power. Raised as Assassins to follow the Creed, Jacob and Evie aim to take back the city from Templar control by infiltrating and uniting London's criminal underworld, aided by notable figures of the era such as novelist Charles Dickens, biologist Charles Darwin, inventor Alexander Graham Bell, political thinker Karl Marx, nurse Florence Nightingale, Duleep Singh (the last maharajah of the Sikh Empire), Sergeant Frederick Abberline of the Metropolitan Police Service (known for his investigation on Jack the Ripper), and Queen Victoria.</p>
+          <p>Additionally, Jacob's granddaughter, Lydia Frye, appears in a separate World War I segment, where she aids Winston Churchill in defending London against a new enemy espionage faction.</p>
+          </article>
+      </section>
+
+
+      <div class='goodbye' load-type="bgImg">
+          <span>BYE</span>
+          <div class='goodbye-slides slide1' spin-speed='5'></div>
+          <div class='goodbye-slides slide2' spin-speed='4'></div>
+          <div class='goodbye-slides slide3' spin-speed='4'></div>
+          <div class='goodbye-slides slide4' spin-speed='5'></div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-items">
+          <div class="footer-item">
+            <div class="promotion uplay">
+              <a target="_blank" href="http://uplay.ubi.com/">
+                <img src="https://ubistatic19-a.akamaihd.net/resource/en-GB/common/Uplaylogos-acu_145149.png" alt="master_Uplay Logos_ACU" load-type="bgImg">
+              </a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <div class="promotion ubisoft">
+            	<a target="_blank" href="https://www.ubisoft.com">
+            		<img src="https://ubistatic19-a.akamaihd.net/resource/en-GB/common/ubisoft-white_EMEA_81038.png" alt="Ubisoft" load-type="bgImg">
+            	</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <div class="promotion">
+          	   <a target="_blank" href="http://www.geforce.com/">
+          		     <img src="https://ubistatic19-a.akamaihd.net/resource/en-GB/common/logo_nvidia_geforce_AC_220978.png" alt="master_Nvidia-GeForce-ac" load-type="bgImg">
+          	   </a>
+             </div>
+          </div>
+          <div class="footer-item">
+            <div class="promotion">
+          	   <a target="_blank" href="javascript:void(0)">
+          		     <img src="https://ubistatic19-a.akamaihd.net/resource/en-GB/common/pc-pegi_18_large_145510.png" alt="PEGI 18 (ACU)" load-type="bgImg">
+               </a>
+             </div>
+          </div>
+        </div>
+        <p>© 2017</p>
+      </footer>
+
+      <script src="js/hero.js"></script>
+
+
+  </body>
+
+</html>

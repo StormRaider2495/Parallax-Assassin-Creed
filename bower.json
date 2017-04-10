@@ -1,0 +1,28 @@
+{
+  "name": "assassins-creed",
+  "description": "parallax project on ac series games",
+  "main": "index.html",
+  "keywords": [
+    "assassins-creed",
+    "assassin",
+    "creed",
+    "ac",
+    "parallax"
+  ],
+  "authors": [
+    "arunit mazumdar"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

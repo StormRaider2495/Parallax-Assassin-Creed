@@ -1,0 +1,865 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #130d0a;
+  /*font-family: 'Playfair Display', serif;*/
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: default;
+  /*border: 1px solid #080808;*/
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #080808;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c3424e;
+  outline: 1px solid #080808;
+  height: 50px;
+  border-radius: 5px;
+}
+
+
+.assassin-loader{
+    position: fixed;
+    top: 0;
+    z-index: 1035;
+    height: 100%;
+    width: 100%;
+    background-color: #080808;
+    opacity: 1;
+    cursor: wait;
+    transition: all 10s ease-out;
+}
+
+.assassin-loader .loader{
+    background-image: url('../images/Abstergo-FH.png');
+    /*background-image: url('https://drive.google.com/uc?export=view&id=0B4OCkOHXRU2-ODZ3TFBBaHZHR0k');*/
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    left: 48%;
+    top: 39%;
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    animation: loader-spin 2s 1s infinite ease-out;
+}
+
+@keyframes loader-spin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(180deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.assassin-loader .loading{
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 3;
+    color: antiquewhite;
+    position: absolute;
+    top: 50%;
+    left: 44%;
+}
+
+.assassin-loader .loading span{
+    margin: 5px;
+    animation: blink 4s ease-out infinite;
+}
+
+.assassin-loader .loading span:nth-child(2){
+    animation-delay: 500ms;
+}
+
+.assassin-loader .loading span:nth-child(3){
+    animation-delay: 1s;
+}
+
+.assassin-loader .loading span:nth-child(4){
+    animation-delay: 1.5s;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#progress{
+  background:
+    /* On "top" */
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      #ccc 10px,
+      #ccc 20px
+    ),
+    /* on "bottom" */
+    linear-gradient(
+      to bottom,
+      #eee,
+      #999
+    );
+  height:2%;
+  position:absolute;
+  width:0;
+  top:68%;
+}
+
+#progstat{
+  font-size: 1em;
+  font-family: cursive;
+  letter-spacing: 5px;
+  position: absolute;
+  margin: 0 auto;
+  top: 70%;
+  margin-top: -40px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.header-logo{
+  /*background-image: url("images/Assassin's_Creed_Film_Logo.png");*/
+  /*background-image: url('https://drive.google.com/uc?export=view&id=0B4OCkOHXRU2-ZDFuSlZRZVp0NkE');*/
+  background-image: url("../images/acv-nav-logo-2x_199621.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 125px;
+  left: 46%;
+  bottom: -5%;
+  /*display: inline-block;*/
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+#hero {
+  height: 800px;
+  /*overflow: hidden;*/
+  position: relative;
+  margin-top: 25px;
+}
+
+
+.content {
+  background-color: #130d0a;
+  position: relative;
+  z-index: 2;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -2;
+}
+
+.first-section {
+  padding: 50px 0 20px 0;
+}
+
+.text-header {
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #ede0d5;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+#hero,
+.layer {
+  min-height: 800px;
+}
+
+.layer-bg {
+  /*background-image: url("images/ilu_bg.jpg");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-Vl9LWG95ZXNpVGM');
+}
+
+.layer-1 {
+  /*background-image: url("images/ilu_03.png");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-Y2FrZ1NRZkVBUlk');
+  background-position: left bottom;
+}
+
+.layer-2 {
+  /*background-image: url("images/ilu_02.png");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-QWk4Rk1Xam1rcUk');
+}
+
+.layer-3 {
+  /*background-image: url("images/ilu_man.png");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-WHZjLU1aWWl5VWc');
+  background-position: right bottom;
+}
+
+.layer-4 {
+  /*background-image: url("images/ilu_01.png");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-bWFJMW9fdEhIaFU');
+}
+
+.layer-overlay {
+  /*background-image: url("images/ilu_overlay.png");*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-TTlBRGp3aThxemM');
+}
+
+.logo {
+    /*background-image: url("images/Assassin's_Creed_Film_Logo.png");*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-ZDFuSlZRZVp0NkE');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 135px;
+    width: 270px;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    display: none;
+    opacity: -1.0;
+    -webkit-box-reflect: below 0px -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.3) 0%, transparent 50%, transparent 100%);
+}
+#assassins {
+    /*background-image: url('images/assassins-creed-logo-game-hd-wallpaper-1920x1080-4956.jpg');*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-MGlZTE9HUDZpazA');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 800px;
+    width: auto;
+    /*margin-top: 45px;*/
+    background-color: #130d0a;
+    position: relative;
+    z-index: 0;
+}
+
+.assassin-0 {
+    /*background-image: url(images/assassins_01_Shao_Jun_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-Y0hWX1JjeG8wVDQ');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 275px;
+    width: 145px;
+    position: absolute;
+    top: 24%;
+    /*left: 19.5%;*/
+    left:0;
+    /*display: block;*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 2.5s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-1 {
+    /*background-image: url(images/assassins_01_Altair_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-SjNWdkcxMjBtUGM');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 275px;
+    width: 145px;
+    position: absolute;
+    top: 24%;
+    /*left: 19.5%;*/
+    left:0;
+    /*display: block;*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 3.5s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-2 {
+    /*background-image: url(images/assassins_02_Ezio_Render.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-OFFWNHhWcWVOeGs');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 265px;
+    width: 150px;
+    position: absolute;
+    top: 24%;
+    /*left: 27%;*/
+    left:8.5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-3 {
+    /*background-image: url(images/assassins_03_Connor_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-RE9Mc2hnbldheEk');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 158px;
+    position: absolute;
+    top: 24%;
+    /*left: 34%;*/
+    left: 15.5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-4 {
+    /*background-image: url(images/assassins_04_Arno_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-TjBjZEp5R2pIRzA');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 205px;
+    position: absolute;
+    top: 10%%;
+    left: 42%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-5 {
+    /*background-image: url(images/assassins_05_Edward_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-WnhkMHRGaEZfUG8');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 185px;
+    position: absolute;
+    top: 24.5%;
+    /*right: 35%;*/
+    right: 24%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-6 {
+    /*background-image: url(images/assassins_06_Aveline_Render.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-T25fMnZIQW5ULTQ');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 190px;
+    position: absolute;
+    top: 24%;
+    /*right: 24%;*/
+    right: 11%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-7 {
+    /*background-image: url(images/assassins_07_Jacob_Frye_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-SjkxMlRFNlRBbkk');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 145px;
+    position: absolute;
+    top: 24%;
+    /*right: 18%;*/
+    right: 5%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-8 {
+    /*background-image: url(images/assassins_07_Evie_Frye_Render_Medium.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-RTdUY2RIRkVsZVE');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 274px;
+    width: 150px;
+    position: absolute;
+    top: 25%;
+    /*right: 13%;*/
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.year-bar{
+  width: 50%;
+  height: 115px;
+  position: absolute;
+  background-color: rgba(253, 253, 253, 0.15);
+  top: 48%;
+  font-family: monospace;
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 15px;
+
+}
+
+.year-bar-left{
+  left: -20%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.year-bar-right{
+  right: -20%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 3s cubic-bezier(0, 1.11, 1, 0.99);
+}
+
+.assassin-9 {
+    /*background-image: url(images/assassins_08_Syndicate_Render.png);*/
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-VFVrQ0I2a2FxWGs');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35%;
+    width: 35%;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-left: -14%;
+}
+
+.overlay-2{
+  /*background-image: url(images/misc-cloud-smoke-element-01.png);*/
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-amFqaEt4aEJUYnM');
+  background-position: top;
+  background-size: auto;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 2000px;
+  position: absolute;
+  z-index: 0;
+  opacity: .7;
+}
+
+div[data-type='parallaxAssassino'] span{
+  color: white;
+  position: absolute;
+  top: -20%;
+  visibility: hidden;
+  opacity : 0;
+}
+
+div[data-type='parallaxAssassino']:hover{
+   transform: scale(1.2,1.2);
+}
+
+div[data-type='parallaxAssassino']:hover span{
+	 opacity: 1;
+   visibility: visible;
+	 transition: opacity 0.6s, visibilty 0.8s;
+}
+.goodbye{
+  height: 1195px;
+  width: 100%;
+  position: relative;
+  background-color: #130d0a;
+}
+.goodbye > span{
+    font-size: 150px;
+    letter-spacing: 200px;
+    position: absolute;
+    top: 35%;
+    left: 28%;
+    z-index: 1;
+    color: silver;
+}
+.goodbye-slides{
+  display: inline-block;
+  float: left;
+  position: relative;
+  /*transition: transform 4s ease-out;*/
+  /*background-image: url(images/assassin_s_creed_wallpaper_by_theeviln-d642ix2.png);*/
+  background-image: url('https://drive.google.com/uc?export=view&id=0B4OCkOHXRU2-a2h6RlJFYWNWbGs');
+  z-index: 5;
+}
+
+.slide1{
+  width: 23.827252419955325%;
+  height: 100%;
+  background-position: 5px 0;
+  /*margin-left: 3%;*/
+  /*transition: transform 3.5s ease-in;*/
+}
+
+.slide2{
+  /*width:  26.06105733432614%;*/
+  width: 350px;
+  height: 100%;
+  background-position: -709px 0;
+  /*transition: transform 4s ease-out;*/
+}
+
+.slide3{
+  /*width:  26.06105733432614%;*/
+  width: 350px;
+  height: 100%;
+  background-position: -1059px 0;
+  /*transition: transform 4s ease-out;*/
+}
+
+.slide4{
+  width:  23.827252419955325%;
+  height: 100%;
+  background-position: -1415px 0;
+  /*transition: transform 3.5s ease-in;*/
+}
+
+/*.goodbye-slides:hover{
+  transform: rotateY(360deg);
+}*/
+
+.footer{
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 2;
+  background-color: rgba(0,0,0,.25);
+  height: auto;
+  padding: 5px;
+  /* margin-top: 5px; */
+  color: antiquewhite;
+}
+
+.footer-items {
+    display: block;
+    width: auto;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div.footer-item {
+    display: inline-block;
+    padding: 10px;
+}
+
+.mobile{
+  background-size: contain;
+  display: none;
+  position: relative;
+  height: 425px;
+  background-repeat: no-repeat;
+}
+
+/*#hero-mobile {
+  background: url("images/full_illustration.png");
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-SU9TaEhrdmpxRTA');
+}
+
+#assassin-mobile {
+  background: url("images/full_assassins.jpg");
+  background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-Z2Nyb2VTTzdCeWs');
+}*/
+
+.details {
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    padding-top: 10%;
+}
+
+.game-name {
+    top: 0px;
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 10%;
+}
+
+.game-name span {
+    font-style: italic;
+    padding-right: 5px;
+    margin-left: -7px;
+}
+
+.details h1 {
+    letter-spacing: 2px;
+    color: crimson;
+    font-size: 32px;
+    vertical-align: middle;
+    font-family: cursive;
+    font-variant: small-caps;
+    position: relative;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.game-logo{
+    height: 15%;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15%;
+    margin-left: -10%;
+    opacity: 0.5;
+}
+
+.game-info{
+    height: auto;
+    width: 75%;
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 4%;
+    position: absolute;
+    left: 13%;
+    bottom: 17%;
+    /* border-radius: 20% 5% 20% 5%; */
+    /* margin-top: 10%; */
+    box-shadow: 2px 10px 20px #080808;
+    margin: 0 auto;
+}
+
+.game-story {
+  position: absolute;
+  background-color: rgba(8, 8, 8, 0.95);
+  bottom: 0;
+  /*bottom: 15%;
+  margin-bottom: -12%;*/
+  font-size: 17px;
+  font-family: cursive;
+  height: auto;
+  width: 100%;
+  padding: 3%;
+  padding-bottom: 6%;
+}
+
+.game-story h2{
+  font-size: 30px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 0.4%;
+}
+
+
+.detail-1{
+    /*background-image: url("../images/assassins-creed-2-concept-art-a.jpg");*/
+    background-image:url("https://drive.google.com/uc?id=0B4OCkOHXRU2-VENHYUE3aTZGd1U");
+}
+
+.game-logo-1{
+    /*background-image: url("../images/Assassin's_Creed_Film_Logo.png");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-V0NfM1FJc0xydHc");
+}
+
+.detail-2{
+    /*background-image: url("../images/AC2_florence_concept.jpg");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-azBYa2cwT2JRYWM");
+}
+
+.game-logo-2{
+    /*background-image: url("../images/logo-AC2.png");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-d3I3MDBQZkNURmc");
+}
+
+.detail-3{
+    /*background-image: url("../images/thumb-1920-347836.jpg");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-eXoyUUQtcmw3LWM");
+}
+
+.game-logo-3{
+    /*background-image: url("../images/logo-ACB.png");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-RVVFV3BmNjJwc2s");
+}
+
+.detail-4{
+    /*background-image: url("../images/thumb-1920-232244.jpg");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-YjJNbzM4Nlh5Z28");
+}
+
+.game-logo-4{
+    /*background-image: url("../images/logo-ACR.png");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-TXZVN0xYVmRyWk0");
+}
+
+.detail-5{
+    background-image: url("../images/Free Assassins Creed III Wallpaper in 1920x1080.jpg");
+}
+
+.game-logo-5{
+    background-image: url("../images/logo-AC3.png");
+}
+
+.detail-6{
+    background-image: url("../images/Assassins_Creed_3-Liberation_Concept-Art_NY19.jpg");
+}
+
+.game-logo-6{
+    background-image: url("../images/logo-ACL.png");
+}
+
+.detail-7{
+    background-image: url("../images/rqKWvxc.jpg");
+}
+
+.game-logo-7{
+    background-image: url("../images/logo-ACBF.png");
+}
+
+.detail-8{
+    /*background-image: url("../images/Game_informer_cover_Rogue.jpg");*/
+    background-image: url("https://drive.google.com/uc?id=0B4OCkOHXRU2-ZHZJajlSOXppMkU");
+}
+
+.game-logo-8{
+    background-image: url("../images/logo-acrogue.png");
+}
+
+.detail-9{
+    background-image: url("../images/assassins-creed-unity-four-assassins-gameplay-screenshot.jpg");
+}
+
+.game-logo-9{
+    background-image: url("../images/logo-ACU2.png");
+}
+
+.detail-10{
+    background-image: url("../images/1431452586-assassins-creed-syndicate-key-art.jpg");
+}
+
+.game-logo-10{
+    background-image: url("../images/logo-ac-syndicate.png");
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/*--------------------------------------- MEDIA QUERIES --------------------------------------- */
+/*----------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px){
+
+  #assassins{
+    width: 110%;
+  }
+
+  .details{
+    width: 110%
+  }
+
+  .goodbye{
+    width: 110%;
+  }
+
+  .footer{
+    width: 110%;
+  }
+
+
+  .assassin-loader .loader {
+    left: 40%;
+    top: 50%;
+  }
+
+  .assassin-loader .loading {
+    top: 50%;
+    left: 50%;
+  }
+
+  #progstat{
+    top:90%;
+  }
+
+  #progress{
+    top:92%;
+  }
+
+  #hero{
+    display: none;
+  }
+  #hero-mobile{
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-SU9TaEhrdmpxRTA');
+    display: block;
+  }
+
+  #assassins{
+    display: none;
+  }
+  #assassin-mobile{
+    background-image: url('https://drive.google.com/uc?id=0B4OCkOHXRU2-Z2Nyb2VTTzdCeWs');
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1340px){
+  .goodbye{
+    display: inline-block;
+    width: auto;
+    margin-left: 12%;
+  }
+  .slide1{
+    display: none;
+  }
+  .slide4{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 800px){
+ .goodbye span{
+    font-size: 150px;
+    letter-spacing: 150px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    z-index: 1;
+    color: silver;
+ }
+}
+
+@media screen and  (max-width: 1138px) and (min-width: 1001px) {
+
+  .content{
+    width: 110%;
+  }
+
+  #assassins{
+    width: 110%;
+  }
+
+  .details{
+    width: 110%
+  }
+
+  .goodbye{
+    width: 110%;
+  }
+
+  .footer{
+    width: 110%;
+  }
+
+  .goodbye span{
+    font-size: 150px;
+    left: 15%;
+    letter-spacing: 150px;
+    left: 18%;
+  }
+
+}
